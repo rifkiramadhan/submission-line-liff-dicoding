@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+    
+    <link rel="shortcut icon" href="img/logo.png">
+    <title>Warung Terbang</title>
+</head>
+    <body>
+    <!-- Image and text -->
+    <nav class="navbar navbar-light bg-danger top-bar">
+        <a class="navbar-brand text-white" href="#">
+        <img src="img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        Warung Terbang
+        </a>
+    </nav>
+        <div id="loginPage" class="w-100"></div>
+    
+        <div class="container" id="app">
+            <div id="profile"></div>
+            <h1 class="text-center"><u>MENU</u></h1>
+            <h3 class="mb-3">Lauk + Nasi</h3>
+            <hr>
+            <div class="row d-flex align-items-center m-2">
+                <div class="col col-md-5 col-sm-5">
+                    <h6>Ayam Geprek + Nasi</h6>
+                    <p class="text-muted">Rp. 15000</p>
+                </div>
+                <div class="col col-md-5 col-sm-5">
+                    <input class="form-control" type="number"  id="AyamGeprek" min="0" placeholder="Jumlah Ayam Geprek + Nasi">
+                    <button class="btn btn-success" id="addAyamGeprek" onclick="add('Ayam Geprek + Nasi', '#AyamGeprek', 15000)"><i class="fas fa-plus-circle"></i> Tambah</button>
+                </div>
+            </div>
+            <div class="row d-flex align-items-center m-2">
+                <div class="col col-md-5 col-sm-5">
+                    <h6>Ayam Goreng + Nasi</h6>
+                    <p class="text-muted">Rp. 13000</p>
+                </div>
+                <div class="col col-md-5 col-sm-5">
+                    <input class="form-control" type="number" id="AyamGoreng" min="0" placeholder="Jumlah Ayam Goreng + Nasi">
+                    <button class="btn btn-success" id="addAyamGoreng" onclick="add('Ayam Goreng + Nasi', '#AyamGoreng', 13000)"><i class="fas fa-plus-circle"></i> Tambah</button>
+                </div>
+            </div>
+            <div class="row d-flex align-items-center m-2">
+                <div class="col col-md-5 col-sm-5">
+                    <h6>Ayam Balado + Nasi</h6>
+                    <p class="text-muted">Rp. 13500</p>
+                </div>
+                <div class="col col-md-5 col-sm-5">
+                    <input class="form-control" type="number" id="AyamBalado" min="0" placeholder="Jumlah Ayam Balado + Nasi">
+                    <button class="btn btn-success" id="addAyamBalado" onclick="add('Ayam Balado + Nasi', '#AyamBalado', 13500)"><i class="fas fa-plus-circle"></i> Tambah</button>
+                </div>
+            </div>
+            <div class="row d-flex align-items-center m-2">
+                <div class="col col-md-5 col-sm-5">
+                    <h6>Ikan Goreng + Nasi</h6>
+                    <p class="text-muted">Rp. 12000</p>
+                </div>
+                <div class="col col-md-5 col-sm-5">
+                    <input class="form-control" type="number" id="IkanGoreng" min="0" placeholder="Jumlah Ikan Goreng + Nasi">
+                    <button class="btn btn-success" id="addIkanGoreng" onclick="add('Ikan Goreng + Nasi', '#IkanGoreng', 12000)"><i class="fas fa-plus-circle"></i> Tambah</button>
+                </div>
+            </div>
+            <div class="row d-flex align-items-center m-2">
+                <div class="col col-md-5 col-sm-5">
+                    <h6>Ikan Bakar + Nasi</h6>
+                    <p class="text-muted">Rp. 15000</p>
+                </div>
+                <div class="col col-md-5 col-sm-5">
+                    <input class="form-control" type="number" id="IkanBakar" min="0" placeholder="Jumlah Ikan Bakar + Nasi">
+                    <button class="btn btn-success" id="addIkanBakar" onclick="add('Ikan Bakar + Nasi', '#IkanBakar', 15000)"><i class="fas fa-plus-circle"></i> Tambah</button>
+                </div>
+            </div>
+            <div class="row d-flex align-items-center m-2">
+                <div class="col col-md-5 col-sm-5">
+                    <h6>Rendang Padang + Nasi</h6>
+                    <p class="text-muted">Rp. 13500</p>
+                </div>
+                <div class="col col-md-5 col-sm-5">
+                    <input class="form-control" type="number" id="RendangPadang" min="0" placeholder="Jumlah Rendang Padang + Nasi">
+                    <button class="btn btn-success" id="addRendangPadang" onclick="add('Rendang Padang + Nasi', '#RendangPadang', 13500)"><i class="fas fa-plus-circle"></i> Tambah</button>
+                </div>
+            </div>
+            <div class="row d-flex align-items-center m-2">
+                <div class="col col-md-5 col-sm-5">
+                    <h6>Sayur-Sayuran</h6>
+                    <p class="text-muted">Rp. 5000</p>
+                </div>
+                <div class="col col-md-5 col-sm-5">
+                    <input class="form-control" type="number" id="SayurSayuran" min="0" placeholder="Jumlah Sayur-Sayuran">
+                    <button class="btn btn-success" id="addSayurSayuran" onclick="add('Sayur-Sayuran', '#SayurSayuran', 5000)"><i class="fas fa-plus-circle"></i> Tambah</button>
+                </div>
+            </div>
+            <div class="row d-flex align-items-center m-2">
+                <div class="col col-md-5 col-sm-5">
+                    <h6>Gorengan</h6>
+                    <p class="text-muted">Rp. 1000</p>
+                </div>
+                <div class="col col-md-5 col-sm-5">
+                    <input class="form-control" type="number" id="Gorengan" min="0" placeholder="Jumlah Gorengan">
+                    <button class="btn btn-success" id="addGorengan" onclick="add('Gorengan', '#Gorengan', 1000)"><i class="fas fa-plus-circle"></i> Tambah</button>
+                </div>
+            </div>
+            <div class="row d-flex align-items-center m-2">
+                <div class="col col-md-5 col-sm-5">
+                    <h6>Telur Rebus & Asin</h6>
+                    <p class="text-muted">Rp. 2000</p>
+                </div>
+                <div class="col col-md-5 col-sm-5">
+                    <input class="form-control" type="number" id="Telur" min="0" placeholder="Jumlah Telur Rebus & Asin">
+                    <button class="btn btn-success" id="addTelur" onclick="add('Telur Rebus & Asin', '#Telur', 2000)"><i class="fas fa-plus-circle"></i> Tambah</button>
+                </div>
+            </div>
+            <hr>
+            <h3 class="mb-3">Minuman</h3>
+            <div class="row d-flex align-items-center m-2">
+                <div class="col col-md-5 col-sm-5">
+                    <h6>Es Teh</h6>
+                    <p class="text-muted">Rp. 3000</p>
+                </div>
+                <div class="col col-md-5 col-sm-5">
+                    <input class="form-control" type="number" id="jmlEsteh" min="0" placeholder="Jumlah Es Teh">
+                    <button class="btn btn-success" id="addEsteh" onclick="add('Es Teh', '#jmlEsteh', 3000)"><i class="fas fa-plus-circle"></i> Tambah</button>
+                </div>
+            </div>
+            <div class="row d-flex align-items-center m-2">
+                <div class="col col-md-5 col-sm-5">
+                    <h6>Es Kopi Susu</h6>
+                    <p class="text-muted">Rp. 5000</p>
+                </div>
+                <div class="col col-md-5 col-sm-5">
+                    <input class="form-control" type="number" id="jmlKopsus" min="0" placeholder="Jumlah Es Kopi Susu">
+                    <button class="btn btn-success" id="addKopsus" onclick="add('Kopi Susu', '#jmlKopsus', 5000)"><i class="fas fa-plus-circle"></i> Tambah</button>
+                </div>
+            </div>
+            <div class="row d-flex align-items-center m-2">
+                <div class="col col-md-5 col-sm-5">
+                    <h6>Es Jeruk</h6>
+                    <p class="text-muted">Rp. 5000</p>
+                </div>
+                <div class="col col-md-5 col-sm-5">
+                    <input class="form-control" type="number" id="jmlEsjer" min="0" placeholder="Jumlah Es Jeruk">
+                    <button class="btn btn-success" id="addEsjer" onclick="add('Es Jeruk', '#jmlEsjer', 5000)"><i class="fas fa-plus-circle"></i> Tambah</button>
+                </div>
+            </div>
+            <div class="row d-flex align-items-center m-2">
+                <div class="col col-md-5 col-sm-5">
+                    <h6>Es Jus Alpukat</h6>
+                    <p class="text-muted">Rp. 8000</p>
+                </div>
+                <div class="col col-md-5 col-sm-5">
+                    <input class="form-control" type="number" id="EsJusAlpukat" min="0" placeholder="Jumlah Es Jus Alpukat">
+                    <button class="btn btn-success" id="addEsJusAlpukat" onclick="add('Es Jus Alpukat', '#EsJusAlpukat', 8000)"><i class="fas fa-plus-circle"></i> Tambah</button>
+                </div>
+            </div>
+            <div class="row d-flex align-items-center m-2">
+                <div class="col col-md-5 col-sm-5">
+                    <h6>Es Jus Melon</h6>
+                    <p class="text-muted">Rp. 6000</p>
+                </div>
+                <div class="col col-md-5 col-sm-5">
+                    <input class="form-control" type="number" id="EsJusMelon" min="0" placeholder="Jumlah Es Jus Melon">
+                    <button class="btn btn-success" id="addEsJusMelon" onclick="add('Es Jus Melon', '#EsJusMelon', 6000)"><i class="fas fa-plus-circle"></i> Tambah</button>
+                </div>
+            </div>
+            <div class="row d-flex align-items-center m-2">
+                <div class="col col-md-5 col-sm-5">
+                    <h6>Air Putih</h6>
+                    <p class="text-muted">Rp. 1000</p>
+                </div>
+                <div class="col col-md-5 col-sm-5">
+                    <input class="form-control" type="number" id="AirPutih" min="0" placeholder="Jumlah Air Putih">
+                    <button class="btn btn-success" id="addAirPutih" onclick="add('Air Putih', '#AirPutih', 1000)"><i class="fas fa-plus-circle"></i> Tambah</button>
+                </div>
+            </div>
+            <hr>
+            <div class="row d-flex align-items-start mt-2">
+                <hr>
+                <div class="col col-md-6 col-sm-6">
+                    <h4>Pesanan</h4>
+                    <ul id="listPesanan" class="list-group"></ul>
+                </div>
+                <div class="col col-md-5 col-sm-5">
+                    <h4>Total :</h4>
+                    <input class="form-control" type="number" value="0" id="total" readonly>
+                    <button class="btn btn-danger" onclick="reset()"><i class="fas fa-minus-circle"></i> Ulangi</button>
+                </div>
+            </div>
+        </div>
+    
+        <button class="btn btn-success w-100 my-3" id="sendMessageButton"><i class="fas fa-comment-dollar"></i> Pesan Sekarang</button>
+        <button class="btn btn-warning w-100 mb-2" id="openWindowButton"><i class="fab fa-chrome"></i> Buka di External Browser</button>
+        <button class="btn btn-danger w-100 mb-2" id="closeAppButton"><i class="fas fa-times-circle"></i> Tutup Aplikasi</button>
+        <button class="btn btn-danger w-100 mb-2" id="liffLogoutButton"><i class="fas fa-sign-out-alt"></i> Keluar</button>
+
+        <!-- Footer -->
+        <footer class="bg-dark text-white p-5">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>LAYANAN PELANGGAN</h5>
+                    <ul>
+                        <li>Pusat Bantuan</li>
+                        <li>Cara Pembelian</li>
+                        <li>Pengiriman</li>
+                        <li>Cara Pengembalian</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>TENTANG KAMI</h5>
+                    <p>
+                        <b>Warung Terbang</b> adalah sebuah restaurant masakan sederhana yang cukup populer
+                        karena dimana setiap pelanggan yang ingin membeli, bisa langsung memesan ke tempat
+                        atau cukup memesan melalui fasilitas website online yang bisa diakses kapan saja
+                        dan dimana saja.
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <h5>MITRA KERJASAMA</h5>
+                    <ul>
+                        <li>GO FOOD</li>
+                        <li>GRAB FOOD</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>HUBUNGI KAMI</h5>
+                    <ul>
+                        <li>021-791-86894</li>
+                        <li>riifkiramadhan2@gmail.com</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3"></div>
+                <div class="col-md-3"></div>
+                <div class="col-md-3"></div>
+            </div>
+        </footer>
+        <div class="copyright text-center text-white font-weight-bold bg-secondary p-2">
+            <p>Developed by Rifki Ramadhan</p>
+        </div>
+</body>
+<script src="js/konten.js"></script>
+<script src="js/liff-starter.js"></script>
+<script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+
+<!-- Font Awesome icons (free version)-->
+<script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+</html>
